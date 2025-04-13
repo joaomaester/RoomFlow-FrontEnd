@@ -34,7 +34,7 @@
 
 .imagem-fundo {
   align-self: flex-end;
-  width: 60%;
+  width: 50%;
   height: 100%;
   background-image: url(../../../../../public/icons/background.jpeg);
   background-position: center;

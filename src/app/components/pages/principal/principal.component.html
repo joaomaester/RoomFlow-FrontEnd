@@ -1,42 +1,63 @@
 <app-nav-bar [textoNav]="'Painel de Monitoramento'"></app-nav-bar>
 
-<div class="corpo">
-  <div class="grid">
+<div class="corpo mat-elevation-z2" style="padding: 16px;">
+  <mat-grid-list cols="2" rowHeight="fit" gutterSize="16px">
 
-    <div class="status">
-      <div class="status-item">
-        <span class="status-icon disponível"></span> Disponível
+    <!-- Status -->
+    <mat-grid-tile colspan="2">
+      <mat-card>
+        <mat-card-title>Status das Salas</mat-card-title>
+        <mat-card-content>
+          <div class="status" style="display: flex; gap: 16px;">
+            <div class="status-item" style="display: flex; align-items: center; gap: 8px;">
+              <mat-icon color="primary">check_circle</mat-icon> Disponível
+            </div>
+            <div class="status-item" style="display: flex; align-items: center; gap: 8px;">
+              <mat-icon color="accent">schedule</mat-icon> Reservado
+            </div>
+            <div class="status-item" style="display: flex; align-items: center; gap: 8px;">
+              <mat-icon color="warn">cancel</mat-icon> Indisponível
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+
+    <!-- Salas -->
+    <mat-grid-tile colspan="2">
+      <div class="grid">
+        <ng-container *ngFor="let sala of salas">
+          <app-cards-sala [sala]="sala"></app-cards-sala>
+        </ng-container>
       </div>
-      <div class="status-item">
-        <span class="status-icon reservado"></span> Reservado
-      </div>
-      <div class="status-item">
-        <span class="status-icon indisponível"></span> Indisponível
-      </div>
-    </div>
+    </mat-grid-tile>
 
-    <div *ngFor="let sala of salas">
-      <app-cards-sala [sala]="sala"></app-cards-sala>
-    </div>
-  </div>
+    <!-- Informações -->
+    <mat-grid-tile colspan="2">
+      <mat-card>
+        <mat-card-title>Informações Gerais</mat-card-title>
+        <mat-card-content>
+          <div class="informacoes" style="display: flex; justify-content: space-around; text-align: center;">
+            <div class="informacao-item">
+              <span class="valor mat-display-1">{{ salasDisponiveis }}</span>
+              <div>Disponíveis</div>
+            </div>
+            <div class="informacao-item">
+              <span class="valor mat-display-1">{{ salasReservadas }}</span>
+              <div>Reservadas</div>
+            </div>
+            <div class="informacao-item">
+              <span class="valor mat-display-1">{{ salasIndisponiveis }}</span>
+              <div>Indisponíveis</div>
+            </div>
+            <div class="informacao-item">
+              <span class="valor mat-display-1">{{ salas.length }}</span>
+              <div>Salas no Total</div>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
 
-
-  <div class="informacoes">
-    <div class="informacao-item">
-      <span class="valor">{{ salasDisponiveis }}</span>
-      <span>Disponíveis</span>
-    </div>
-    <div class="informacao-item">
-      <span class="valor">{{ salasReservadas }}</span>
-      <span>Reservadas</span>
-    </div>
-    <div class="informacao-item">
-      <span class="valor">{{ salasIndisponiveis }}</span>
-      <span>Indisponíveis</span>
-    </div>
-    <div class="informacao-item">
-      <span class="valor">{{ salas.length }}</span>
-      <span>Salas no Total</span>
-    </div>
-  </div>
+  </mat-grid-list>
 </div>

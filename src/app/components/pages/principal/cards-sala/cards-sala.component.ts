@@ -2,12 +2,13 @@ import { Component, Input } from '@angular/core';
 import { Status } from '../../../../Enums/Status.enum';
 import { ISala } from '../../../../Interfaces/Sala.interface';
 import { CommonModule } from '@angular/common';
+import { MatCardModule } from '@angular/material/card';
 
 
 @Component({
   selector: 'app-cards-sala',
   standalone: true,
-  imports:[CommonModule],
+  imports:[CommonModule, MatCardModule],
   templateUrl: './cards-sala.component.html',
   styleUrl: './cards-sala.component.css'
 })
