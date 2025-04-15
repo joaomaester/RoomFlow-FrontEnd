@@ -1,5 +1,6 @@
 <app-nav-bar [textoNav]="'Painel de Monitoramento'"></app-nav-bar>
 
+<<<<<<< HEAD
 <div class="corpo mat-elevation-z2" style="padding: 16px;">
   <mat-grid-list cols="2" rowHeight="fit" gutterSize="16px">
 
@@ -60,4 +61,45 @@
     </mat-grid-tile>
 
   </mat-grid-list>
+=======
+<div class="corpo">
+  <div class="grid">
+
+    <div class="status">
+      <div class="status-item">
+        <span class="status-icon disponível"></span> Disponível
+      </div>
+      <div class="status-item">
+        <span class="status-icon reservado"></span> Reservado
+      </div>
+      <div class="status-item">
+        <span class="status-icon indisponível"></span> Indisponível
+      </div>
+    </div>
+
+    <div *ngFor="let sala of salas">
+      <app-cards-sala [sala]="sala"></app-cards-sala>
+    </div>
+  </div>
+
+
+  <div class="informacoes">
+    <div class="informacao-item">
+      <span class="valor">{{ salasDisponiveis }}</span>
+      <span>Disponíveis</span>
+    </div>
+    <div class="informacao-item">
+      <span class="valor">{{ salasReservadas }}</span>
+      <span>Reservadas</span>
+    </div>
+    <div class="informacao-item">
+      <span class="valor">{{ salasIndisponiveis }}</span>
+      <span>Indisponíveis</span>
+    </div>
+    <div class="informacao-item">
+      <span class="valor">{{ salas.length }}</span>
+      <span>Salas no Total</span>
+    </div>
+  </div>
+>>>>>>> 52eb728 (atualizacao do codigo)
 </div>

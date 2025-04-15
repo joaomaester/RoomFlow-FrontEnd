@@ -46,14 +46,22 @@
   position: absolute;
   z-index: 1;
   height: 100%;
+<<<<<<< HEAD
   width: 40%;
+=======
+  width: 50%;
+>>>>>>> 52eb728 (atualizacao do codigo)
 }
 
 .container_content {
   position: relative;
   top: 50%;
   left: 50%;
+<<<<<<< HEAD
   transform: translate(-20%,-70%);
+=======
+  transform: translate(-20%,-60%);
+>>>>>>> 52eb728 (atualizacao do codigo)
   padding: 20px;
   align-items: center;
 }
@@ -68,4 +76,11 @@
   letter-spacing: 2px;
   margin-bottom: 40px;
   font-weight: 400;
+<<<<<<< HEAD
+=======
+}
+
+button {
+  background-color: yellow;
+>>>>>>> 52eb728 (atualizacao do codigo)
 }

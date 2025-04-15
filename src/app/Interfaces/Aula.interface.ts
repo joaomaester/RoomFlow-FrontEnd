@@ -5,6 +5,7 @@ import { ITurma } from "./Turma.interface";
 import { IUsuario } from "./Usuario.interface";
 
 export interface IAula {
+<<<<<<< HEAD
     Id : number;
     Bloco : Bloco;
     Disciplina : IDisciplina;
@@ -12,4 +13,13 @@ export interface IAula {
     Turma: ITurma;
     Data : Date;
     Professor : IUsuario;
+=======
+    id? : number;
+    bloco : Bloco;
+    disciplina : IDisciplina;
+    sala : ISala;
+    turma: ITurma;
+    data : Date | string;
+    professor : IUsuario;
+>>>>>>> 52eb728 (atualizacao do codigo)
 }

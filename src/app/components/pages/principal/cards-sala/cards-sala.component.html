@@ -1,4 +1,5 @@
 <div>
+<<<<<<< HEAD
   <mat-card
     [ngStyle]="{'background-color': corDoCard()}"
     class="card"
@@ -21,3 +22,24 @@
     </mat-card-actions>
   </mat-card>
 </div>
+=======
+    <div
+      [ngStyle]="{'background-color': corDoCard()}" 
+      class="card" 
+      (click)="toggleCard()"
+    > 
+      {{ sala.id }}
+    </div>
+  </div>
+  
+  <div class="overlay" *ngIf="exibirCard" (click)="toggleCard()">
+    <div class="modal-card" (click)="$event.stopPropagation()">
+      <h5 class="card-title"> {{ sala }}</h5>
+      <p class="card-text">Professor: Aroldo</p>
+      <p class="card-text">Disciplina: sei lá bixo</p>
+      <p class="card-text">Turma: 3h3</p>
+      <button class="btn btn-primary" (click)="toggleCard()">Fechar</button>
+    </div>
+  </div>
+  
+>>>>>>> 52eb728 (atualizacao do codigo)

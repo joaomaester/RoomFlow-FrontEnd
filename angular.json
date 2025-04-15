@@ -94,5 +94,11 @@
         }
       }
     }
+<<<<<<< HEAD
+=======
+  },
+  "cli": {
+    "analytics": false
+>>>>>>> 52eb728 (atualizacao do codigo)
   }
 }

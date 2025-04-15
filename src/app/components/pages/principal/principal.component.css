@@ -4,7 +4,11 @@
   width: 100%;
   height: 90%;
   align-items: center;
+<<<<<<< HEAD
   background-color: black;
+=======
+  background-color: rgb(134, 216, 241);
+>>>>>>> 52eb728 (atualizacao do codigo)
   padding: 40px;
 }
 
